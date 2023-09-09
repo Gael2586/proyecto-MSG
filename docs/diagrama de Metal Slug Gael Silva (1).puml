@@ -1,0 +1,47 @@
+
+class Jugador
+class Personaje
+class Pantalla
+class Escenario
+class Armas
+class ArmaBasica
+class ArmaEspecial
+class Vida
+Class Proyectil
+class Marco 
+class Dan 
+Class Puntaje 
+class ObjetosEspeciales
+class Vehiculo
+class Plataforma
+class Enemigos
+class Soldado
+class JefeFinal
+class Pollo 
+class Prisionero
+class Frutas 
+class Nivel 
+
+Jugador *-- Personaje
+Personaje o-- Armas 
+Personaje o-- ObjetosEspeciales 
+Enemigos o-- Armas
+Personaje *-- Puntaje
+Armas o-- Proyectil 
+Pantalla *-- Escenario 
+Escenario *-- Plataforma
+Pantalla *-- Vida 
+Pantalla *-- Puntaje 
+Pantalla *-- Nivel
+Personaje *-- Vida
+Marco --|> Personaje 
+Dan --|> Personaje 
+ArmaBasica --|> Armas 
+ArmaEspecial --|> Armas 
+Soldado --|> Enemigos 
+JefeFinal --|> Enemigos 
+Prisionero --|> ObjetosEspeciales 
+Pollo --|> ObjetosEspeciales 
+Frutas --|> ObjetosEspeciales 
+Vehiculo --|> ObjetosEspeciales 
+ArmaEspecial --|> ObjetosEspeciales 
