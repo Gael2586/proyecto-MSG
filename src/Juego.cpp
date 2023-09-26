@@ -27,6 +27,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    cout<<"nuevocambioxdd"<<endl;
  cout<<"Jugar Metal Slug   " <<endl;
     for (int i = 0; i < 3; i++)
     {

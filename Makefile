@@ -1,3 +1,7 @@
+CXX = x86_64-w64-mingw32-g++
+CXXFLAGS = -g 
+
+
 JugarJuego : bin/Game 
 	./bin/Game
 
@@ -7,7 +11,7 @@ bin/Game : src/Juego.cpp
 
 	echo "Compilando el Juego "
 	rm bin/Game
-	g++ src/Juego.cpp -o bin/Game -I include
+	$(CXX) src/Juego.cpp -o bin/Game -I include
 
 Compilarjuego : src/Juego.cpp 
 	g++ src/Juego.cpp -o bin/Game -I include
