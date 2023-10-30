@@ -22,17 +22,58 @@
 #include <Prisionero.hpp>
 #include <Frutas.hpp>
 #include <Nivel.hpp>
+#include <Ventana.hpp>
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <Vaca.hpp>
+#include <Dibujo.hpp>
+#include <Dragon.hpp>
+#include <curses.h>
+#include <Proyectil.hpp>
 
 using namespace std;
-
 int main(int argc, char const *argv[])
 {
-    cout<<"nuevocambioxdd"<<endl;
- cout<<"Jugar Metal Slug   " <<endl;
-    for (int i = 0; i < 3; i++)
+  Dragon *dragon = new Dragon();
+  Vaca *vaca = new Vaca(9, 50);
+  // Vaca *vaca2 = new Vaca();
+  Ventana *ventana = new Ventana();
+  list<Dibujo *> dibujos;
+  dibujos.push_back(dragon);
+  dibujos.push_back(vaca);
+  // dibujos.push_back(vaca2);
+  list<Actualizable *> actualizables;
+  actualizables.push_back(dragon);
+  actualizables.push_back(vaca);
+  // actualizables.push_back(vaca2);
+
+  while (!ventana->Debocerrar())
+  {
+    int key = getch();
+    if (key == 'a' || key == KEY_LEFT)
     {
-        /* code */
+
+      vaca->Avanzar();
     }
 
-    return 0;
+    if (key == 'd' || key == KEY_RIGHT)
+    {
+
+      vaca->CambiarDireccion();
+    }
+    if (key == ' ')
+    {
+
+      Proyectil* p = 
+      new Proyectil(vaca->LeerPosicion());
+      dibujos.push_back(p);
+      actualizables.push_back(p);
+    }
+
+    ventana->Dibujar(dibujos);
+     ventana->Actualizar(actualizables);
+  }
+
+  return 0;
 }

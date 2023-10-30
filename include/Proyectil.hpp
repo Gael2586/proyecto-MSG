@@ -1,10 +1,24 @@
 #pragma once 
+#include <Dibujo.hpp>
+#include <Actualizable.hpp>
+#include<Vector.hpp>
 
-class Proyectil
+class Proyectil : public Dibujo, public Actualizable
 {
 private:
-    /* data */
+    int tiempoVida;
+
 public:
-    Proyectil(/* args */) {}
+
+    Proyectil(Vector posicion) : 
+    Dibujo(posicion.LeerX(),posicion.LeerY(),"proyectil")
+    {
+
+        this->tiempoVida = 100;
+    }
+    void Actualizar()
+    {
+        this->posicion.DesplazarX(1);
+    }
     ~Proyectil() {}
 };

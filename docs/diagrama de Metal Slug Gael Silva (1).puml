@@ -1,7 +1,9 @@
 
 class Jugador
-class Personaje
-class Pantalla
+class Vector
+class Actualizable
+class Ventana
+class Dibujo
 class Escenario
 class Armas
 class ArmaBasica
