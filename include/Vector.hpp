@@ -40,6 +40,14 @@ public:
     {
         this->y += y * this->direccion_y;
     }
+    int MostraDireccionX(){
+
+        return direccion_x;
+    }
+        int MostraDireccionY(){
+
+        return direccion_y;
+    }
     int LeerX()
     {
         return this->x;

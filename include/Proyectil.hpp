@@ -11,7 +11,7 @@ private:
 public:
 
     Proyectil(Vector posicion) : 
-    Dibujo(posicion.LeerX(),posicion.LeerY(),"proyectil")
+    Dibujo(posicion.LeerX() + 7,posicion.LeerY()+1,"proyectil")
     {
 
         this->tiempoVida = 100;

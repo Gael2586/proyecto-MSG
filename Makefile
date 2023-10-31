@@ -16,8 +16,8 @@
 # Compilarjuego : src/Juego.cpp 
 # 	g++ src/Juego.cpp -o bin/Game -I include
 
-bin/cow : src/cow.cpp include/*
-	c++ src/cow.cpp -o bin/cow -I include -l curses 
+bin/Juego : src/Juego.cpp include/*
+	c++ src/Juego.cpp -o bin/Juego -I include -l curses 
 
-run : bin/cow
-	./bin/cow
+run : bin/Juego
+	./bin/Juego

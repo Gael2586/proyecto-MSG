@@ -27,9 +27,10 @@ public:
         // this->posicion.DesplazarX();
     }
 
-    Dragon(int x) : Dibujo("dragon")
+    Dragon(int x, int y) : Dibujo("dragon")
     {
         this->posicion.DesplazarX(x);
+        this->posicion.DesplazarY(y);
     }
     // void Actualizar()
     // {

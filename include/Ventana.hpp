@@ -2,9 +2,8 @@
 #include <curses.h>
 #include <unistd.h>
 #include <Actualizable.hpp>
-#include <list>
-
 #include <Dibujo.hpp>
+#include <list>
 
 using namespace std;
 class Ventana
@@ -37,7 +36,7 @@ public:
         usleep(41000);
     }
 
-    void Dibujar(list<Dibujo *> listaDibujos)
+    void Dibujar(list<Dibujo*> listaDibujos)
     {
         clear();
         //  d.Dibujar();
