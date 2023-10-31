@@ -24,7 +24,12 @@ class Prisionero
 class Frutas 
 class Nivel 
 
+
+Ventana --> Pantalla
 Jugador *-- Personaje
+Dibujo *-- Actualizable
+Dibujo *-- Vector
+Dan --> Dibujo
 Personaje o-- Armas 
 Personaje o-- ObjetosEspeciales 
 Enemigos o-- Armas
