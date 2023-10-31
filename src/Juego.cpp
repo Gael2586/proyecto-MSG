@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
   Dragon *dragon = new Dragon(5,1);
-  Plataforma *plataforma = new Plataforma(90,70);
+  Plataforma *plataforma = new Plataforma(60,70);
   Soldado *soldado = new Soldado(50,50);
   Dan *dan = new Dan(0,0);
  
